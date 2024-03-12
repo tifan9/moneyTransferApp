@@ -8,5 +8,4 @@ const InputComp = () => {
     </View>
   );
 }
-
 export  {InputComp}
