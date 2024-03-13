@@ -41,6 +41,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-native-elements": "^3.4.3",
     "react-native-gesture-handler": "~2.14.0",
     "react-native-paper": "^5.12.3",
@@ -74,6 +75,12 @@
     "react-native-safe-area-context": "^4.9.0",
     "react-native-vector-icons": "^10.0.3"
 >>>>>>> ft/sendmoney
+=======
+    "react-native-dropdown-select-list": "^2.0.5",
+    "react-native-elements": "^3.4.3",
+    "react-native-paper": "^5.12.3",
+    "react-native-safe-area-context": "^4.9.0"
+>>>>>>> fbf9413... send money
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
