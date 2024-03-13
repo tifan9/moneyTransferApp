@@ -1,24 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+// import { Image, ImageBackground, StyleSheet, Text, View, Pressable,} from 'react-native';
+// import { Icon } from 'react-native-elements';
+// import { TextInput } from 'react-native-paper';
+// import { SelectList } from 'react-native-dropdown-select-list';
+// import React from 'react';
 
-import { NavigationContainer } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { BottomNav, Navigation } from './src/components/Navigation';
-const Stack = createNativeStackNavigator();
-export default function App() {
-  return (
-    <>
-      <NavigationContainer>
-        <Navigation  />
-        {/* <BottomNav  /> */}
-      </NavigationContainer>
-      <StatusBar style="light"/>
-      {/* <Splash  /> */}
-      {/* <GetStarted  /> */}
-      {/* <Welcome  /> */}
-    </>
-  );
-}
 // const Send = () => {
 //   const [selected, setSelected] =React.useState("");
 
@@ -118,5 +104,11 @@ export default function App() {
 
 
 // export default Send;
-// >>>>>>> bc714d2... send money
 
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#1a1a1a',
+   
+//   },
+// });
