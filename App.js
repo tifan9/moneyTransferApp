@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-paper';
 import { SelectList } from 'react-native-dropdown-select-list';
 import React from 'react';
 
-const App = () => {
+const Send = () => {
   const [selected, setSelected] =React.useState("");
 
   const pay =[
@@ -103,7 +103,7 @@ const App = () => {
 };
 
 
-export default App;
+export default Send;
 
 const styles = StyleSheet.create({
   container: {
