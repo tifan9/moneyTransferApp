@@ -79,7 +79,7 @@ export const History = ({navigation}) => {
                   </View>
 
                   <View style={[tw `gap-y-1`]}>
-                    <Text style={[tw `text-white`]}>$ 989.43</Text>
+                    <Text style={[tw `text-white`]}>$ 98900.43</Text>
                     <Text style={[tw `text-[#4D5052]`]}>05/12/2023</Text>
                   </View>
                 </View>
