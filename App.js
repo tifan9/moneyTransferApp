@@ -1,6 +1,11 @@
-<<<<<<< HEAD
+
 import { StatusBar } from 'expo-status-bar';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { View, Text } from 'react-native'
+import React from 'react'
+import { Sendmoney } from './Sendmoney'
+import { Newrecipient } from './Addnewcard'
+import Addnewcard  from './Addnewcard'
 
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
