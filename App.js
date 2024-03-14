@@ -1,12 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import Splash from './src/screens/Splash';
+import GetStarted from './src/screens/GetStarted';
+import Welcome from './src/screens/Slides';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <>
+      {/* <Splash  /> */}
+      {/* <GetStarted  /> */}
+      <Welcome  />
       <StatusBar style="auto" />
-    </View>
+    </>
   );
 }
 
