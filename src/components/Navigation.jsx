@@ -17,7 +17,7 @@ export const Navigation = () => {
   return (
     <>
     <Stack.Navigator>
-      <Stack.Screen name='credit' component={CreditCard} option={{headerShown:false}}  />
+      {/* <Stack.Screen name='credit' component={CreditCard} option={{headerShown:false}}  /> */}
       <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
       <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
       
