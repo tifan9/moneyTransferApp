@@ -7,16 +7,21 @@ import { Profile } from '../screens/Profile';
 import Feather from 'react-native-vector-icons/Feather'
 import { NavigationContainer } from '@react-navigation/native';
 import { CreditCard } from '../screens/CreditCard';
-import { createStackNavigator } from '@react-navigation/stack';
-
+// import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import 'react-native-gesture-handler';
+import { History } from '../screens/History';
 const Tab = createBottomTabNavigator()
-// const Stack = createStackNavigator()
+const Stack = createNativeStackNavigator()
 export const Navigation = () => {
   return (
     <>
-    {/* <Stack.Navigator>
-      <Stack.Screen name='Home' component={BottomNav}  />
-    </Stack.Navigator> */}
+    <Stack.Navigator>
+      <Stack.Screen name='credit' component={CreditCard} option={{headerShown:false}}  />
+      <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
+      <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
+      
+    </Stack.Navigator>
     </>
   )
 }

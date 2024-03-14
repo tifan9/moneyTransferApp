@@ -1,12 +1,16 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const ButtonComp = () => {
+export const ButtonComp = () => {
   return (
-    <View>
-      <Text></Text>
-    </View>
+    <>
+      <TouchableOpacity 
+      style={[
+              tw `rounded-lg bg-yellow-500 py-4 px-5 w-full flex justify-center items-center`,
+            ]}>
+        <Text style={[tw `font-bold`,{fontSize:18}]}>Send Money</Text>
+      </TouchableOpacity>
+    </>
   );
 }
 
-export {ButtonComp}
