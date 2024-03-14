@@ -28,7 +28,7 @@ export const Sendmoney = () => {
   return (
     <View style={styles.container}>
       <View>
-        <View style={{display:'flex',flexDirection:'row',flexWrap:'wrap',padding:20,paddingTop:50,backgroundColor:'rgb(64,65,66)'}} >
+        <View style={{display:'flex',flexDirection:'row',flexWrap:'wrap',padding:20,paddingTop:50,backgroundColor:'#202325'}} >
           <Icon name='arrow-left' type='material-community' color='#f9be02' size={25} /> 
         <Pressable  onPress={()=>navigation.navigate('')}>
         <Text style={{color:'white',fontSize:20,marginHorizontal:20,fontWeight:'600'}} >United State</Text>
