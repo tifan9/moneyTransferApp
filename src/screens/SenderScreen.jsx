@@ -1,12 +1,12 @@
 import React , {useState} from 'react';
-import { View, Text,Dimensions, KeyboardAvoidingView} from 'react-native';
+import { View, Text,Dimensions, KeyboardAvoidingView, StatusBar} from 'react-native';
 import { ButtonComp } from '../components/ButtonComp';
 import { InputNumber } from '../components/InputNumber';
 import  {InputText} from '../components/InputText';
 import HeaderIconText from '../components/HeaderIconText';
 import {DropdownComponent} from '../components/DropDownInput';
 
-export default function SenderScreen() {
+export default function SenderScreen({navigation}) {
     const height= Dimensions.get('screen').height
     const width= Dimensions.get('screen').width
 
@@ -18,6 +18,7 @@ export default function SenderScreen() {
     const[valueError, setvalueError]=useState('')
     const [homeAddress, sethomeAddress] = useState('');
     const [homeAddressError, sethomeAddressError] = useState('');
+    const [countryData, setcountryData] = useState([]);
 
     const ValidateForm= ()=>{
         let valid=true
@@ -33,7 +34,7 @@ export default function SenderScreen() {
             valid=false
 
         }else{
-            setdebitCardError('') 
+            sethomeAddressError('') 
         }if (firstname.trim() === ""){
             setfirstnameError(' Name is required!')
             valid=false
@@ -73,7 +74,7 @@ export default function SenderScreen() {
             <HeaderIconText text='Sender' />
         </View>
         <View>
-            <Text style={{color:'#EE9B12', paddingVertical:23, paddingHorizontal:17, fontSize:15}}> Sender personal Details</Text>
+            <Text style={{color:'#EE9B12', paddingVertical:8,paddingBottom:16, paddingHorizontal:17, fontSize:15}}> Sender personal Details</Text>
             <View>
                 <InputText TextTitle='First Name' placeholder={'First Name '} placeholderTextColor={'#8F9294'} value={firstname} onChangeText={setfirstname}/>
                 <View>{firstnameError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {firstnameError}</Text>:null}</View>
@@ -81,20 +82,20 @@ export default function SenderScreen() {
                 <View>{lastnameError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {lastnameError}</Text>:null}</View>
             </View>
             <View>
-                <Text style={{color:'#EE9B12', paddingVertical:23, paddingHorizontal:17, fontSize:15}}> Home Address</Text>
+                <Text style={{color:'#EE9B12', paddingVertical:20, paddingHorizontal:17, fontSize:15}}> Home Address</Text>
                 <View>
-                    <Text style={{color:'#cccdcf', paddingTop:23,paddingHorizontal:20, fontSize:15}}> Country</Text>
+                    <Text style={{color:'#cccdcf', paddingBottom:12, paddingHorizontal:20, fontSize:15}}> Country</Text>
                     <DropdownComponent valueError={valueError} setvalueError={setvalueError} value={value} setValue={setValue} countryData={countryData} setcountryData={setcountryData}/>
-                    <View>{valueError?<Text style={{color:'red', fontSize:12, paddingHorizontal:35,paddingTop:1}}> {valueError}</Text>:null}</View>
+                    <View>{valueError?<Text style={{color:'red', fontSize:12, paddingHorizontal:35,paddingTop:6}}> {valueError}</Text>:null}</View>
 
                     <Text style={{color:'#cccdcf', paddingTop:23,paddingHorizontal:20, fontSize:15}}> Home Address</Text>
-                    <InputNumber keyboardType={'numeric'}  placeholder={'000-22'} value={homeAddress} onChangeText={sethomeAddress} iconSize={30} iconNameLeft={'credit-card'} iconColor={'gray'}/>
+                    <InputNumber  placeholder={'000-22'} value={homeAddress} onChangeText={sethomeAddress} iconSize={30} iconNameLeft={'home'} iconColor={'gray'}/>
                     <View>{homeAddressError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:6}}> {homeAddressError}</Text>:null}</View>
                 </View>
                 
             </View>
             <View>
-                <ButtonComp text1='Continue' onPress={handleForm}/>
+                <ButtonComp text1='Continue' />
             </View>
         </View>
     </View>

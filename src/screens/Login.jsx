@@ -3,62 +3,74 @@ import { View, Text, Pressable,StyleSheet,Dimensions} from 'react-native';
 import { ButtonComp } from '../components/ButtonComp';
 import { StatusBar } from 'expo-status-bar';
 import HeaderText from '../components/HeaderText';
-import CountryDropDown from '../components/CountryDropDown';
-import {DropdownComponent} from '../components/DropDownInput';
+import { InputLogin } from '../components/InputLogin';
 
 
 export default function LoginIn({navigation}) {
     const height= Dimensions.get('screen').height
     const width= Dimensions.get('screen').width
-    const [value, setValue] = useState('');
-    const[valueError, setvalueError]=useState('')
-    const [selected, setSelected] = useState('+250');
-    const [country, setCountry] = useState('');
-    const [phone, setPhone] = useState('');
-    const [phoneError, setphoneError] = useState('');
-    const [countryData, setcountryData]= useState([])
+    const[email,setEmail]= useState('')
+    const[password,setPassword]= useState('')
+    const[emailError, setEmailError]=useState('')
+    const[passwordError, setPasswordError]=useState('')
+    const [showPassword,setshowPassword]= useState(true)
    
+   
+
+    const isValidEmail=(email)=>{
+      const emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
+      return(
+        emailRegex.test(email)
+      )
+    }
 
     const ValidateForm= ()=>{
-        let valid=true
-    console.log(value.label, phone);
-        if (value.label===undefined){
-          setvalueError('Country is required!')
-          valid=false
-        }else {
-          setvalueError('')
-        }if (phone===undefined || phone === ""){
-          setphoneError('Phone Number is required!')
-          valid=false
-        
-        }else if (isNaN(phone)){
-          setphoneError('Phone Number is invalid')
-          valid=false
-        }else{
-          setphoneError('')
-        }
-        return valid 
-        
-       }
-      const handleForm= ()=>{
-        if (ValidateForm()){
-           navigation.navigate('Register')
-       }
-       
-     } 
+      let valid=true
+  
+      if (email.trim()==('')){
+        setEmailError('Email is required!')
+        valid=false
+      }else if (!isValidEmail(email)){
+        setEmailError('Email is invalid')
+        valid=false
+      }else{
+        setEmailError('')
+      }
+      if (password.trim()==('')){
+          setPasswordError('Password is required')
+      }else {
+          setPasswordError('')
+      }
+      return valid 
+      
+     }
+     const handleForm= ()=>{
+      if (ValidateForm()){
+         navigation.navigate('')
+     }
+     
+   } 
 
-   
+   const handlePassword=()=>{
+    setshowPassword(!showPassword)
+  }
+       
     
   return (
     <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
         <StatusBar style='light'/>
             <View style={styles.container1}>
             <HeaderText text='Log In'/>
-                <View>{valueError?<Text style={{color:'red', fontSize:12, paddingHorizontal:35,paddingTop:1}}> {valueError}</Text>:null}</View>
-                <DropdownComponent valueError={valueError} setvalueError={setvalueError} value={value} setValue={setValue} countryData={countryData} setcountryData={setcountryData}/>
-                <View>{phoneError?<Text style={{color:'red', fontSize:12, paddingHorizontal:35,paddingTop:1}}> {phoneError}</Text>:null}</View>
-                <CountryDropDown setCountry={setCountry} countryData={countryData} setPhone={setPhone} phone={phone} phoneError={phoneError}  selected={selected} setSelected={setSelected} />
-                <ButtonComp text1='Log In' onPress={handleForm}/>
+              <View >
+
+                  <InputLogin TextTitle='Email Address' placeholder='email'iconNameLeft='email-outline' iconSize={20} value={email} onChangeText={setEmail} error={emailError}/>
+                  <View>{emailError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {emailError}</Text>:null}</View>
+                  <InputLogin TextTitle='Password' placeholder='your password' iconNameLeft='lock-outline' iconNameRight={showPassword? 'eye-off-outline':'eye'} iconSize={20} secureTextEntry={showPassword} 
+                  value={password}  onChangeText={setPassword} error={passwordError} onPress={handlePassword}/>
+                  <View>{passwordError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {passwordError}</Text>:null}</View>
+              </View>
+
+                <ButtonComp text1='Log In'/>
             </View>
     </View>
   )

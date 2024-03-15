@@ -21,7 +21,7 @@ export default function HeaderIconText({text, onPress}) {
 const styles=StyleSheet.create({
     wholeContainer:{
         backgroundColor:'#212324', 
-        paddingTop:40,
+        paddingTop:30,
         paddingBottom:20,
         paddingHorizontal:20,
         display:'flex',

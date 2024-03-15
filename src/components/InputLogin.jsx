@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 
-const InputText= ({TextTitle, label, value,placeholder, onChangeText,error, keyboardType}) => {
+const InputLogin= ({TextTitle, label, value,placeholder, onChangeText,error,secureTextEntry, keyboardType,iconNameLeft,iconSize,iconColor,onPress,iconNameRight}) => {
   return (
     <View style={styles.container}> 
     <View style={styles.textcontainer}>
@@ -21,12 +21,26 @@ const InputText= ({TextTitle, label, value,placeholder, onChangeText,error, keyb
       onChangeText={onChangeText}
       style={styles.textinput}
       keyboardType={keyboardType}
+      secureTextEntry={secureTextEntry}
+      left={<TextInput.Icon 
+        icon={iconNameLeft}
+        size={iconSize}
+        color={iconColor}
+        />}
+  
+        right={<TextInput.Icon 
+        onPress={onPress}
+        icon={iconNameRight}
+        size={iconSize}
+        color={iconColor}
+        />}
     
     />
     </View>
   )
 }
-export {InputText}
+export {InputLogin}
+
 // the styling of the textinput component
 
 const styles=StyleSheet.create({
@@ -38,6 +52,7 @@ const styles=StyleSheet.create({
     borderRadius:10,
     underlineColor:'transparent',
     opacity:0.5,
+    paddingVertical:0,
     height:43,
     borderColor:'#41464A'
     
@@ -57,4 +72,3 @@ const styles=StyleSheet.create({
   
 
 
-export {TextInput}
