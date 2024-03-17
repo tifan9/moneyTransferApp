@@ -9,7 +9,7 @@ export default function App() {
     <>
     {/* <Sendmoney /> */}
     {/* <Addnewcard /> */}
-    <Addnewcard />
+    {/* <Addnewcard /> */}
     </>
   )
 }
