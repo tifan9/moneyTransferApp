@@ -1219,6 +1219,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
@@ -1230,6 +1231,8 @@
 >>>>>>> ca7aded... welcome
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
@@ -2973,10 +2976,14 @@ color-name@^1.0.0, color-name@~1.1.4:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 color-string@^1.6.0, color-string@^1.9.0:
 =======
 color-string@^1.6.0:
 >>>>>>> fbf9413... send money
+=======
+color-string@^1.6.0:
+>>>>>>> ft/sendmoney
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.9.1.tgz#4467f9146f036f855b764dfb5bf8582bf342c7a4"
   integrity sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==
@@ -2993,6 +3000,7 @@ color@^3.1.2:
     color-string "^1.6.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 color@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/color/-/color-4.2.3.tgz#d781ecb5e57224ee43ea9627560107c0e0c6463a"
@@ -3003,6 +3011,8 @@ color@^4.2.3:
 
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 colorette@^1.0.7:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
@@ -3155,6 +3165,7 @@ crypto-random-string@^2.0.0:
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
@@ -3162,6 +3173,8 @@ cssesc@^3.0.0:
 
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 csstype@^3.0.2:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
@@ -3220,6 +3233,7 @@ deepmerge@^3.2.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 deepmerge@^4.2.2, deepmerge@^4.3.0:
 =======
 deepmerge@^4.3.0:
@@ -3227,6 +3241,9 @@ deepmerge@^4.3.0:
 =======
 deepmerge@^4.2.2, deepmerge@^4.3.0:
 >>>>>>> fbf9413... send money
+=======
+deepmerge@^4.2.2, deepmerge@^4.3.0:
+>>>>>>> ft/sendmoney
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.3.1.tgz#44b5f2147cd3b00d4b56137685966f26fd25dd4a"
   integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
@@ -3968,6 +3985,7 @@ hermes-profile-transformer@^0.0.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
 =======
 hoist-non-react-statics@^3.3.0:
@@ -3975,6 +3993,9 @@ hoist-non-react-statics@^3.3.0:
 =======
 hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
 >>>>>>> fbf9413... send money
+=======
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
+>>>>>>> ft/sendmoney
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -4117,6 +4138,7 @@ is-arrayish@^0.3.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
@@ -4128,6 +4150,8 @@ is-binary-path@~2.1.0:
 >>>>>>> ca7aded... welcome
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 is-buffer@~1.1.1, is-buffer@~1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
@@ -4615,6 +4639,7 @@ lodash.throttle@^4.1.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.17.4:
 =======
 lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4:
@@ -4622,6 +4647,9 @@ lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4:
 =======
 lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.17.4:
 >>>>>>> bc714d2... send money
+=======
+lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.17.4:
+>>>>>>> ft/sendmoney
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -5688,10 +5716,14 @@ react-freeze@^1.0.0:
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0:
 =======
 react-is@^16.13.1, react-is@^16.7.0:
 >>>>>>> fbf9413... send money
+=======
+react-is@^16.13.1, react-is@^16.7.0:
+>>>>>>> ft/sendmoney
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -5703,15 +5735,21 @@ react-is@^17.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ft/sendmoney
 react-native-dropdown-select-list@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/react-native-dropdown-select-list/-/react-native-dropdown-select-list-2.0.5.tgz#3626b2bf9b9c5e157b02f60cf36174cde7550056"
   integrity sha512-TepbcagQVUMB6nLuIlVU2ghRpQHAECOeZWe8K04ymW6NqbKbxuczZSDFfdCiABiiQ2dFD+8Dz65y4K7/uUEqGg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fbf9413... send money
 =======
+=======
+>>>>>>> ft/sendmoney
 react-native-element-dropdown@^2.10.2:
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/react-native-element-dropdown/-/react-native-element-dropdown-2.10.2.tgz#277d3c5a581055caa014a593a27536e229580732"
@@ -5719,7 +5757,10 @@ react-native-element-dropdown@^2.10.2:
   dependencies:
     lodash "^4.17.21"
 
+<<<<<<< HEAD
 >>>>>>> bc714d2... send money
+=======
+>>>>>>> ft/sendmoney
 react-native-elements@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-3.4.3.tgz#c33919002aef83a0c0f98d0ed56009714ad9b1b3"
@@ -5734,6 +5775,7 @@ react-native-elements@^3.4.3:
     react-native-ratings "8.0.4"
     react-native-size-matters "^0.3.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 react-native-gesture-handler@~2.14.0:
   version "2.14.1"
@@ -5750,6 +5792,8 @@ react-native-gesture-handler@~2.14.0:
 >>>>>>> ca7aded... welcome
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 react-native-paper@^5.12.3:
   version "5.12.3"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-5.12.3.tgz#d583119722ebbfbb7fe40400181d63748cca3683"
@@ -5762,9 +5806,12 @@ react-native-paper@^5.12.3:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fbf9413... send money
 =======
+=======
+>>>>>>> ft/sendmoney
 react-native-picker-select@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/react-native-picker-select/-/react-native-picker-select-9.0.1.tgz#af454433061a18b7307a725fc045c05ad494e300"
@@ -5772,7 +5819,10 @@ react-native-picker-select@^9.0.1:
   dependencies:
     lodash.isequal "^4.5.0"
 
+<<<<<<< HEAD
 >>>>>>> f007196... recipient
+=======
+>>>>>>> ft/sendmoney
 react-native-ratings@8.0.4:
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-8.0.4.tgz#efd5ebad8acc08bf98d34d39b18fb7a6813ef991"
@@ -5781,6 +5831,7 @@ react-native-ratings@8.0.4:
     lodash "^4.17.15"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react-native-safe-area-context@4.9.0:
 =======
 react-native-safe-area-context@^4.9.0:
@@ -5788,10 +5839,14 @@ react-native-safe-area-context@^4.9.0:
 =======
 react-native-safe-area-context@^4.9.0:
 >>>>>>> fbf9413... send money
+=======
+react-native-safe-area-context@^4.9.0:
+>>>>>>> ft/sendmoney
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.9.0.tgz#21a570ca3594cb4259ba65f93befaa60d91bcbd0"
   integrity sha512-/OJD9Pb8IURyvn+1tWTszWPJqsbZ4hyHBU9P0xhOmk7h5owSuqL0zkfagU0pg7Vh0G2NKQkaPpUKUMMCUMDh/w==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 react-native-screens@^3.29.0:
   version "3.29.0"
@@ -5804,6 +5859,8 @@ react-native-screens@^3.29.0:
 <<<<<<< HEAD
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 react-native-size-matters@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.3.1.tgz#24d0cfc335a2c730f6d58bd7b43ea5a41be4b49f"
@@ -5811,8 +5868,11 @@ react-native-size-matters@^0.3.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f007196... recipient
+=======
+>>>>>>> ft/sendmoney
 react-native-vector-icons@^10.0.3:
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-10.0.3.tgz#369824a3b17994b2cd65edbaa32dbf9540d49678"
@@ -5822,12 +5882,15 @@ react-native-vector-icons@^10.0.3:
     yargs "^16.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ca7aded... welcome
 =======
 >>>>>>> fbf9413... send money
 =======
 >>>>>>> f007196... recipient
+=======
+>>>>>>> ft/sendmoney
 react-native@0.73.4:
   version "0.73.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.73.4.tgz#81e07d4e7b6308c4649d5fa24038c0e87b17f2e1"
@@ -6855,6 +6918,7 @@ url-join@4.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use-latest-callback@^0.1.5, use-latest-callback@^0.1.7:
 =======
 use-latest-callback@^0.1.5, use-latest-callback@^0.1.9:
@@ -6862,16 +6926,22 @@ use-latest-callback@^0.1.5, use-latest-callback@^0.1.9:
 =======
 use-latest-callback@^0.1.5:
 >>>>>>> fbf9413... send money
+=======
+use-latest-callback@^0.1.5:
+>>>>>>> ft/sendmoney
   version "0.1.9"
   resolved "https://registry.yarnpkg.com/use-latest-callback/-/use-latest-callback-0.1.9.tgz#10191dc54257e65a8e52322127643a8940271e2a"
   integrity sha512-CL/29uS74AwreI/f2oz2hLTW7ZqVeV5+gxFeGudzQrgkCytrHw33G4KbnQOrRlAEzzAFXi7dDLMC9zhWcVpzmw==
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
 =======
 =======
 >>>>>>> fbf9413... send money
+=======
+>>>>>>> ft/sendmoney
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
 >>>>>>> ca7aded... welcome
   version "1.0.2"

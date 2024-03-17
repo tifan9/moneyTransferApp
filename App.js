@@ -1,11 +1,6 @@
 
 import { StatusBar } from 'expo-status-bar';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Sendmoney } from './src/screens/Sendmoney'
-import { Newrecipient } from './src/screens/Addnewcard'
-import Addnewcard  from './src/screens/Addnewcard'
 
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -22,8 +17,7 @@ export default function App() {
       {/* <Splash  /> */}
       {/* <GetStarted  /> */}
       {/* <Welcome  /> */}
-    {/* <Sendmoney /> */}
-    {/* <Addnewcard /> */}
-</>
-  )
+    </>
+  );
 }
+
