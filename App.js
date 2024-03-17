@@ -7,7 +7,7 @@ import Addnewcard  from './src/screens/Addnewcard'
 export default function App() {
   return (
     <>
-    <Sendmoney />
+    {/* <Sendmoney /> */}
     {/* <Addnewcard /> */}
     </>
   )
