@@ -9,7 +9,7 @@ export default function App() {
     <>
       {/* <Splash  /> */}
       {/* <GetStarted  /> */}
-      <Welcome  />
+      {/* <Welcome  /> */}
       <StatusBar style="auto" />
     </>
   );
