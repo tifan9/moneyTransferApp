@@ -8,11 +8,18 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
+<<<<<<< HEAD
       <NavigationContainer>
         <Navigation  />
         {/* <BottomNav  /> */}
       </NavigationContainer>
       <StatusBar style="light"/>
+=======
+      {/* <Splash  /> */}
+      {/* <GetStarted  /> */}
+      {/* <Welcome  /> */}
+      <StatusBar style="auto" />
+>>>>>>> df1aec0... appjs changed
     </>
   );
 }
