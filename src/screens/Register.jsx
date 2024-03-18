@@ -60,7 +60,6 @@ export default function Register({navigation}) {
               console.log(error)
             }
         }
-<<<<<<< HEAD
         return valid 
         
        }
@@ -70,18 +69,7 @@ export default function Register({navigation}) {
        }
        
      } 
-=======
-        Authenticate()
     }
-     
-   } 
-
-   const handlePassword=()=>{
-    setshowPassword(!showPassword)
-  }
-
->>>>>>> ft/LoginScreen
-
   return (
     <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
         <StatusBar style='light'/>
