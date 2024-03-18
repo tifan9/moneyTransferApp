@@ -11,15 +11,28 @@ import { CreditCard } from '../screens/CreditCard';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import 'react-native-gesture-handler';
 import { History } from '../screens/History';
+import LoginIn from '../screens/Login';
+import Register from '../screens/Register';
+import NewRecipient from '../screens/NewRecipient';
+import Splash from '../screens/Splash';
+import GetStarted from '../screens/GetStarted';
+import Welcome from '../screens/Slides';
+import { Sendmoney } from '../screens/Sendmoney';
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 export const Navigation = () => {
   return (
     <>
-    <Stack.Navigator>
-      {/* <Stack.Screen name='credit' component={CreditCard} option={{headerShown:false}}  /> */}
+    <Stack.Navigator initialRouteName='Login'>
+      <Stack.Screen name="Splash" component={Splash} option={{headerShown:false}}  />
+      <Stack.Screen name="GetStarted" component={GetStarted} option={{headerShown:false}}  />
+      <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}} />
+      {/* <Stack.Screen name="Login" component={LoginIn} options={{headerShown:false}} />
+      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/> */}
       <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
+      <Stack.Screen name="Sendmoney" component={Sendmoney} options={{headerShown:false}} />
       <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
+      <Stack.Screen name="NewRecipient" component={NewRecipient} options={{headerShown:false}} />
       
     </Stack.Navigator>
     </>

@@ -42,7 +42,7 @@ export default function Register({navigation}) {
        }
       const handleForm= ()=>{
         if (ValidateForm()){
-           navigation.navigate('LoginIn')
+           navigation.navigate('HomeScreen')
        }
        
      } 

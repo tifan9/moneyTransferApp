@@ -7,8 +7,8 @@ import CountryDropDown from '../components/CountryDropDown';
 
 
 export default function NewRecipient() {
-    const height= Dimensions.get('screen').height
-    const width= Dimensions.get('screen').width
+    const WindowHeight= Dimensions.get('screen')
+    const WindowWidth= Dimensions.get('screen')
 
     const [selected, setSelected] = useState('+250');
     const [country, setCountry] = useState('');
@@ -40,7 +40,7 @@ export default function NewRecipient() {
        
      } 
   return (
-    <View  style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
+    <View  style={{backgroundColor:'#121315', height:WindowHeight, width:WindowWidth, gap:20}}>
         <StatusBar style='light'/>
         <View>
             <HeaderText text= 'New Recipient'/>

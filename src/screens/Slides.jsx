@@ -132,7 +132,7 @@ const getItemLayout=(data, index)=>({
         <Text style={{color:'gray'}}>Skip</Text>
         </Pressable>
         <View style={{flexDirection:'row', gap:6}}>{renderDot()}</View>
-        <TouchableOpacity onPress={()=>navigation.navigate('start')}>
+        <TouchableOpacity onPress={navigation.navigate('HomeScreen')}>
         <Text style={{color:'yellow'}}>Next</Text>
         </TouchableOpacity>
 
