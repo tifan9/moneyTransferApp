@@ -5,6 +5,9 @@ import LoginIn from './src/screens/Login';
 import Register from './src/screens/Register';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import NewRecipient from './src/screens/NewRecipient';
+import SenderScreen from './src/screens/SenderScreen';
+import ThemeChangeModeIntoWhite from './src/components/ContextContainer';
 
 
 import { NavigationContainer } from '@react-navigation/native';

@@ -25,7 +25,7 @@ import React , {useEffect} from 'react';
       fetch("https://api.countrystatecity.in/v1/countries", requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(JSON.stringify(result));
+        // console.log(JSON.stringify(result));
         let count = Object.keys(result).length;
         let countryArray=[];
         for (let i=0; i<count; i++){
@@ -72,13 +72,14 @@ import React , {useEffect} from 'react';
 
   const styles = StyleSheet.create({
     container: {
-      paddingHorizontal: 30,
+      paddingHorizontal: 20,
     },
     dropdown: {
       height: 43,
-      borderColor: 'gray',
-      borderWidth: 0.5,
+      borderColor: '#41464A',
+      borderWidth: 1,
       borderRadius: 8,
+      opacity:0.8,
       paddingHorizontal: 20,
     },
     label: {
@@ -91,7 +92,7 @@ import React , {useEffect} from 'react';
     },
     placeholderStyle: {
       fontSize: 14,
-      color:'white',
+      color:'gray',
     },
     selectedTextStyle: {
       fontSize: 16,
