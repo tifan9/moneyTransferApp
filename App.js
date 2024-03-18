@@ -6,16 +6,16 @@ import Register from './src/screens/Register';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { BottomNav, Navigation } from './src/components/Navigation';
-import DropdownInput from './src/screens/DropdownInput';
+
 const Stack = createNativeStackNavigator();
 export default function App() {
 
   return (
     <>
-    <DropdownInput  />
-      {/* <NavigationContainer>
+      <NavigationContainer>
         <Navigation  />
-      </NavigationContainer> */}
+        {/* <BottomNav  /> */}
+      </NavigationContainer>
       <StatusBar style="light"/>
     </>
   );
