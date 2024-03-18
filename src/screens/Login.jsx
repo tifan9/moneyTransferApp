@@ -4,6 +4,10 @@ import { ButtonComp } from '../components/ButtonComp';
 import { StatusBar } from 'expo-status-bar';
 import HeaderText from '../components/HeaderText';
 import { InputLogin } from '../components/InputLogin';
+import FlashMessage ,{showMessage} from 'react-native-flash-message';
+import { Firebase_Auth } from '../../firebaseConfig.js';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+
 
 
 export default function LoginIn({navigation}) {
@@ -14,6 +18,7 @@ export default function LoginIn({navigation}) {
     const[emailError, setEmailError]=useState('')
     const[passwordError, setPasswordError]=useState('')
     const [showPassword,setshowPassword]= useState(true)
+    const Autho = Firebase_Auth
    
    
 
@@ -46,10 +51,24 @@ export default function LoginIn({navigation}) {
      }
      const handleForm= ()=>{
       if (ValidateForm()){
-         navigation.navigate('')
-     }
+      const Authenticate= async()=>{
+        try{
+          const createUser= await signInWithEmailAndPassword(Autho,email,password)
+           navigation.navigate('')
+          console.log(createUser)
+        }catch(error){
+          showMessage({
+            message: "Invalid user password/email",
+            style:{paddingVertical:25},
+            type: "danger",
+          });
+          console.log(error)
+        }
+    }
+    Authenticate()
      
    } 
+  }
 
    const handlePassword=()=>{
     setshowPassword(!showPassword)
@@ -59,6 +78,7 @@ export default function LoginIn({navigation}) {
   return (
     <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
         <StatusBar style='light'/>
+        <FlashMessage position={"top"}/>
             <View style={styles.container1}>
             <HeaderText text='Log In'/>
               <View >
@@ -70,7 +90,7 @@ export default function LoginIn({navigation}) {
                   <View>{passwordError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {passwordError}</Text>:null}</View>
               </View>
 
-                <ButtonComp text1='Log In'/>
+                <ButtonComp text1='Log In'  onPress={handleForm} />
             </View>
     </View>
   )

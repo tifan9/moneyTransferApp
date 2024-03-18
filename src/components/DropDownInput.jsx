@@ -25,7 +25,7 @@ import React , {useEffect} from 'react';
       fetch("https://api.countrystatecity.in/v1/countries", requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(JSON.stringify(result));
+        // console.log(JSON.stringify(result));
         let count = Object.keys(result).length;
         let countryArray=[];
         for (let i=0; i<count; i++){

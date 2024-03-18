@@ -1,9 +1,12 @@
-import React , {useState} from 'react';
+import React , {useState, useContext} from 'react';
 import { View, Text,StyleSheet,Dimensions} from 'react-native';
 import { ButtonComp } from '../components/ButtonComp';
 import { StatusBar } from 'expo-status-bar';
 import HeaderText from '../components/HeaderText';
 import { InputLogin } from '../components/InputLogin';
+import { Firebase_Auth } from '../../firebaseConfig.js';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+
 
 
 export default function Register({navigation}) {
@@ -14,9 +17,10 @@ export default function Register({navigation}) {
     const[emailError, setEmailError]=useState('')
     const[passwordError, setPasswordError]=useState('')
     const [showPassword,setshowPassword]= useState(true)
-   
+    const Autho = Firebase_Auth
    
 
+  
     const isValidEmail=(email)=>{
       const emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
       return(
@@ -46,15 +50,25 @@ export default function Register({navigation}) {
      }
      const handleForm= ()=>{
       if (ValidateForm()){
-         navigation.navigate('')
-     }
+        const Authenticate= async()=>{
+            try{
+              const createUser= await createUserWithEmailAndPassword(Autho,email,password)
+              // console.log(createUser)
+              
+              navigation.navigate('')
+            }catch(error){
+              console.log(error)
+            }
+        }
+        Authenticate()
+    }
      
    } 
 
    const handlePassword=()=>{
     setshowPassword(!showPassword)
   }
-    
+
 
   return (
     <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
@@ -70,7 +84,7 @@ export default function Register({navigation}) {
                   <View>{passwordError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {passwordError}</Text>:null}</View>
               </View>
 
-                <ButtonComp text1='Register' />
+                <ButtonComp text1='Register' onPress={handleForm} />
             </View>
     </View>
   )

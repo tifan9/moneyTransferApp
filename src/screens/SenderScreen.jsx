@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import { View, Text,Dimensions, KeyboardAvoidingView, StatusBar} from 'react-native';
+import { View, Text,Dimensions, KeyboardAvoidingView, StatusBar, Platform} from 'react-native';
 import { ButtonComp } from '../components/ButtonComp';
 import { InputNumber } from '../components/InputNumber';
 import  {InputText} from '../components/InputText';
@@ -68,7 +68,7 @@ export default function SenderScreen({navigation}) {
      } 
 
   return (
-    <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
+    <KeyboardAvoidingView behavior='position' keyboardVerticalOffset={-80} style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
         <StatusBar style='light'/>
         <View>
             <HeaderIconText text='Sender' />
@@ -98,6 +98,6 @@ export default function SenderScreen({navigation}) {
                 <ButtonComp text1='Continue' />
             </View>
         </View>
-    </View>
+    </KeyboardAvoidingView>
   )
 }
