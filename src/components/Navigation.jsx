@@ -5,22 +5,33 @@ import { Landing } from '../screens/Landing';
 import { Help } from '../screens/Help';
 import { Profile } from '../screens/Profile';
 import Feather from 'react-native-vector-icons/Feather'
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import { CreditCard } from '../screens/CreditCard';
 // import { createStackNavigator } from '@react-navigation/stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import 'react-native-gesture-handler';
+// import 'react-native-gesture-handler';
 import { History } from '../screens/History';
+import LoginIn from '../screens/Login';
+import Register from '../screens/Register';
+import NewRecipient from '../screens/NewRecipient';
+import SenderScreen from '../screens/SenderScreen';
+
+
+
+
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 export const Navigation = () => {
   return (
     <>
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName='HomeScreen'>
       {/* <Stack.Screen name='credit' component={CreditCard} option={{headerShown:false}}  /> */}
       <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
       <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
-      
+      <Stack.Screen name="Login" component={LoginIn} options={{headerShown:false}} />
+      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/>
+      <Stack.Screen name="NewRecipient" component={NewRecipient}  options={{headerShown:false}}/>
+      <Stack.Screen name="SenderScreen" component={SenderScreen}  options={{headerShown:false}}/>
     </Stack.Navigator>
     </>
   )

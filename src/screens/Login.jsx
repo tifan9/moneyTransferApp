@@ -54,7 +54,7 @@ export default function LoginIn({navigation}) {
       const Authenticate= async()=>{
         try{
           const createUser= await signInWithEmailAndPassword(Autho,email,password)
-           navigation.navigate('')
+           navigation.navigate('HomeScreen')
           console.log(createUser)
         }catch(error){
           showMessage({
