@@ -5,7 +5,7 @@ import CountryCodeDropdownPicker from 'react-native-dropdown-country-picker'
  export default function CountryDropDown({selected, setSelected, setCountry, phone,phoneError, setPhone}){
   
   return(
-    <View style={{paddingHorizontal:30, gap:20}}>
+    <View style={{paddingHorizontal:20, gap:20}}>
         <CountryCodeDropdownPicker 
         selected={selected} 
         setSelected={setSelected}
@@ -17,6 +17,7 @@ import CountryCodeDropdownPicker from 'react-native-dropdown-country-picker'
         countryCodeTextStyles={{fontSize: 13}}
         countryCodeContainerStyles={{backgroundColor:'#FCA210', paddingVertical:12, borderColor:'transparent'}}
         searchStyles={{borderColor:'transparent'}}
+        
         searchTextStyles={{fontSize:16, borderColor:'transparent', paddingLeft:7, color:'white'}}
         
       />
