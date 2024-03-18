@@ -3,14 +3,15 @@ import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { BottomNav, Navigation } from './src/components/Navigation';
+import DropdownInput from './src/screens/DropdownInput';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
-      <NavigationContainer>
+    <DropdownInput  />
+      {/* <NavigationContainer>
         <Navigation  />
-        {/* <BottomNav  /> */}
-      </NavigationContainer>
+      </NavigationContainer> */}
       <StatusBar style="light"/>
     </>
   );

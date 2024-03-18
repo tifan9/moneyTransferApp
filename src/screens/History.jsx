@@ -13,7 +13,7 @@ export const History = ({navigation}) => {
     <>
         <View style={[tw `bg-[#121214]`, {height:windowedHeight}]}>
         <View style={[tw `border-b border-gray-500 bg-[#202325] pt-8 `, {height:120} ]}>
-          <View style={[tw `flex flex-row gap-4 align-center p-5 pt-10`]}>
+          <View style={[tw `flex flex-row gap-4 items-center p-5 pt-10`]}>
               <TouchableOpacity
                 onPress={() => navigation.navigate("HomeScreen")}
               >
