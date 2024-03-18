@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { View,Text } from 'react-native';
+import Navigation from './src/screens/Navigation';
+import Success from './src/screens/Transfersuccess';
+
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to sxfftart working on yourhjgjhjgjgjg app!</Text>
-      <StatusBar style="auto" />
-    </View>
+<Success />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
