@@ -129,7 +129,7 @@ const getItemLayout=(data, index)=>({
         </TouchableOpacity>
         <View style={{flexDirection:'row', gap:6, paddingTop:50}}>{renderDot()}</View>
         <TouchableOpacity onPress={()=>navigation.navigate('start')}>
-        <Text style={{color:'#FFC300', fontSize:18, paddingTop:50}}>Next</Text>
+        <Text style={{color:'#FFC300', fontSize:18, paddingTop:50}}>Net</Text>
         </TouchableOpacity>
 
      </View>
