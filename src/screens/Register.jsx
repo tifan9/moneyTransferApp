@@ -55,7 +55,7 @@ export default function Register({navigation}) {
               const createUser= await createUserWithEmailAndPassword(Autho,email,password)
               // console.log(createUser)
               
-              navigation.navigate('')
+              navigation.navigate('Login')
             }catch(error){
               console.log(error)
             }
