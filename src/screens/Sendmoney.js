@@ -36,7 +36,9 @@ export const Sendmoney = () => {
         </View>
         <View style={{backgroundColor:'rgb(64,65,66)',margin:40,borderRadius:10,padding:20}}>
           <Text style={{color:'white',margin:5}}>you pay</Text>
-        <SelectList 
+      
+          <TextInput right={<TextInput.Icon icon="chevron-down" color="#f9be02"/>} label=''  mode='outlined' underlineColor='#f9be02' placeholder='' textColor='white' theme={{colors:{background:'black'}}} />
+        {/* <SelectList 
         data={pay} 
         setSelected={setSelected} 
         boxStyles={{backgroundColor:'#1a1a1a'}}
@@ -48,10 +50,16 @@ export const Sendmoney = () => {
         
         
          maxHeight={100}
-        />
+        /> */}
+      
           
           <Text style={{color:'white',margin:5}}>Recipient gets</Text>
-          <SelectList 
+          
+         
+         
+          <TextInput right={<TextInput.Icon icon="chevron-down" color="#f9be02"/>} label=''  mode='outlined' underlineColor='#f9be02' placeholder='' borderRadius='20' textColor='white' theme={{colors:{background:'black'}}} />
+
+          {/* <SelectList 
           data={data} 
           setSelected={setSelected} 
           search={false} 
@@ -62,7 +70,7 @@ export const Sendmoney = () => {
           inputStyles={{color:'white'}}
          maxHeight={100}
 
-          />
+          /> */}
           
           <View style={{display:'flex', flexDirection:'row',flexWrap:'wrap'}}>
             <Icon name='swap-horizontal' type='material-community' color='white' size={25} />
