@@ -22,9 +22,11 @@ const styles=StyleSheet.create({
   textContainer:{
     backgroundColor:'#FCA210',
     borderRadius:8,
+    padding:5,
   },
 
   text:{
+    fontWeight:100,
     fontSize:17,
     paddingVertical:10,
     textAlign:'center',
