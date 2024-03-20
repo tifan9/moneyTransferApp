@@ -8,8 +8,8 @@ export default function App() {
   return (
     <>
     {/* <Sendmoney /> */}
-    <Addnewcard />
+    {/* <Addnewcard /> */}
+    {/* <Addnewcard /> */}
     </>
   )
 }
-//
