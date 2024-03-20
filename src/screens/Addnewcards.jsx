@@ -8,7 +8,7 @@ export default function Newcard({Tittle}) {
     <View>
       <View style={{margin:10}} >
         <Text style={{color:'white',marginBottom:5,fontWeight:'500'}} > {Tittle} </Text>
-        <TextInput  mode='outlined' style={{backgroundColor:'#1a1a1a',borderColor:'white',borderWidth:1}} >
+        <TextInput textColor='white' mode='outlined' color='white' style={{backgroundColor:'#1a1a1a',borderColor:'white',borderWidth:1}} >
         {/* <Image source={require('../../assets/img/master-card.png')} style={styles.image}/> */}
         </TextInput> 
         <Text style={{color:'white',fontSize:17,paddingTop:30}}>Transfers are possible only to cards of United state banks.The issuing bank may change additional fees for depositing the funds to the card. please, contact your bank for more information about applicable fees. </Text>
