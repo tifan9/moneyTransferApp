@@ -11,7 +11,7 @@ import { InputNumber } from '../components/InputNumber';
 
 
 
-export default function NewRecipient() {
+export default function NewRecipient({navigation}) {
     const WindowHeight= Dimensions.get('screen')
     const WindowWidth= Dimensions.get('screen')
 
@@ -73,21 +73,25 @@ export default function NewRecipient() {
        }
       const handleForm= ()=>{
         if (ValidateForm()){
-           navigation.navigate('LoginIn')
+           navigation.navigate('SenderScreen')
        }
        
      } 
   return (
    
-    <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
+    <View style={{
+        backgroundColor:'#121315', 
+        height:WindowHeight, 
+        width:WindowWidth, 
+        flex:1, 
+        gap:20}}>
 
         <StatusBar style='light'/>
         <View >
             <View>
-                <HeaderIconText text='New Recipient' />
+                <HeaderIconText onPress={() => navigation.navigate('DisplayRecipient')} text='New Recipient' />
             </View>
-            <View>
-                <ScrollView>
+            <ScrollView>
                 <View>
                     <Text style={{color:'#cccdcf', paddingTop:23,paddingHorizontal:20, fontSize:15}}> Recipient payment card</Text>
                    <InputNumber keyboardType={'numeric'}  placeholder={'000-22'} value={debitCard} onChangeText={setdebitCard} iconSize={30} iconNameLeft={'credit-card'} iconColor={'gray'}/>
@@ -116,7 +120,6 @@ export default function NewRecipient() {
                     <ButtonComp text1='Continue' onPress={handleForm}/>
                 </View>
                 </ScrollView>
-            </View>
             <View>
 
             </View>

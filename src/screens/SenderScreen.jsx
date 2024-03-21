@@ -62,7 +62,7 @@ export default function SenderScreen({navigation}) {
 
     const handleForm= ()=>{
         if (ValidateForm()){
-           navigation.navigate('LoginIn')
+           navigation.navigate('Addnewcards')
        }
        
      } 
@@ -95,7 +95,7 @@ export default function SenderScreen({navigation}) {
                 
             </View>
             <View>
-                <ButtonComp text1='Continue' />
+                <ButtonComp text1='Continue' onPress={handleForm} />
             </View>
         </View>
     </KeyboardAvoidingView>

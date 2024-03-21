@@ -6,7 +6,7 @@ import HeaderText from '../components/HeaderText';
 import { InputLogin } from '../components/InputLogin';
 import { Firebase_Auth } from '../../firebaseConfig.js';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-
+import tw from 'twrnc';
 
 
 export default function Register({navigation}) {
@@ -83,11 +83,15 @@ export default function Register({navigation}) {
                   <InputLogin TextTitle='Email Address' placeholder='email'iconNameLeft='email-outline' iconSize={20} value={email} onChangeText={setEmail} error={emailError}/>
                   <View>{emailError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {emailError}</Text>:null}</View>
                   <InputLogin TextTitle='Password' placeholder='your password' iconNameLeft='lock-outline' iconNameRight={showPassword? 'eye-off-outline':'eye'} iconSize={20} secureTextEntry={showPassword} 
-                  value={password}  onChangeText={setPassword} error={passwordError} onPress={handlePassword}/>
+                  value={password}  onChangeText={setPassword} error={passwordError} />
                   <View>{passwordError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {passwordError}</Text>:null}</View>
               </View>
 
                 <ButtonComp text1='Register' onPress={handleForm} />
+            </View><View style={[tw `pr-6 items-center justify-center`]}>
+            <Text style={[tw `text-white`]}>Already have an account?
+            <Text style={[tw `text-yellow-500`]} onPress={()=>navigation.navigate('Login')}> Login</Text>
+            </Text>
             </View>
     </View>
   )

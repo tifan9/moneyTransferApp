@@ -1,7 +1,4 @@
-import { View, Text, Pressable, SectionList } from 'react-native'
-import React from 'react'
-import { Icon } from 'react-native-elements';
-import { TextInput } from 'react-native-paper';
+
 import { View, Text, Pressable,StyleSheet, SectionList,Image } from 'react-native'
 import React from 'react'
 import { Icon } from 'react-native-elements';
