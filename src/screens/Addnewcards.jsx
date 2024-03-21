@@ -1,14 +1,8 @@
-import {
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  SectionList,
-  Image,
-} from "react-native";
-import React from "react";
-import { Icon } from "react-native-elements";
-import { Button, TextInput } from "react-native-paper";
+
+import { View, Text, Pressable,StyleSheet, SectionList,Image } from 'react-native'
+import React from 'react'
+import { Icon } from 'react-native-elements';
+import { Button, TextInput } from 'react-native-paper';
 
 export default function Newcard({ Tittle }) {
   return (
@@ -58,7 +52,7 @@ export default function Newcard({ Tittle }) {
         </Pressable>
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({

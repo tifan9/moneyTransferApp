@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, ImageBackground, StyleSheet, Text, View, Pressable,} from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View, Pressable,TouchableOpacity} from 'react-native';
 import { Icon } from 'react-native-elements';
 import { TextInput } from 'react-native-paper';
 import { SelectList } from 'react-native-dropdown-select-list';
 import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 
-export const Sendmoney = () => {
+export const Sendmoney = ({navigation}) => {
   const [selected, setSelected] =React.useState("");
 
   const pay =[
@@ -30,7 +30,7 @@ export const Sendmoney = () => {
       <View>
         <View style={{display:'flex',flexDirection:'row',flexWrap:'wrap',padding:20,paddingTop:50,backgroundColor:'#202325'}} >
           <Icon name='arrow-left' type='material-community' color='#f9be02' size={25} /> 
-        <Pressable  onPress={()=>navigation.navigate('')}>
+        <Pressable  onPress={()=>navigation.navigate('HomeScreen')}>
         <Text style={{color:'white',fontSize:20,marginHorizontal:20,fontWeight:'600'}} >United State</Text>
         </Pressable>
         </View>
@@ -109,9 +109,11 @@ export const Sendmoney = () => {
         />
           
         </View>
-        <View style={{marginLeft:40,marginRight:40}} >
+        <TouchableOpacity 
+        style={{paddingLeft:40,paddingRight:40}} 
+        onPress={()=>navigation.navigate('DisplayRecipient')}>
           <Text style={{textAlign:'center',backgroundColor:'#f9be02',margin:10,fontSize:20,fontWeight:'500',padding:10,borderRadius:8}}>Select Recipient</Text>
-        </View>
+        </TouchableOpacity>
 
        </View>
       <StatusBar style="auto" />
