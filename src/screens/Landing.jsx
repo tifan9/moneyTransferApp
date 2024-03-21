@@ -42,7 +42,7 @@ const Landing = ({ navigation }) => {
             <TouchableOpacity style={[
                   tw `rounded-lg bg-yellow-500 py-4 px-5 w-full flex justify-center items-center`,
                 ]}
-                onPress={navigation.navigate('Sendmoney')}
+                onPress={() => navigation.navigate('Sendmoney')}
                 >
                   <Text style={[tw `font-bold`,{fontSize:18}]}>Send Money</Text>
                 </TouchableOpacity>

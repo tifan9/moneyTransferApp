@@ -3,7 +3,7 @@ import { View, Text,StyleSheet, Pressable} from 'react-native';
 import { IconButton, Colors } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 
-export default function HeaderIconText({text, onPress}) {
+export default function HeaderIconText({navigation,text, onPress}) {
   return (
   <View>
     <View style={styles.wholeContainer}>

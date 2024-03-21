@@ -7,7 +7,7 @@ import { InputLogin } from '../components/InputLogin';
 import FlashMessage ,{showMessage} from 'react-native-flash-message';
 import { Firebase_Auth } from '../../firebaseConfig.js';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-
+import tw from 'twrnc';
 
 
 export default function LoginIn({navigation}) {
@@ -54,8 +54,9 @@ export default function LoginIn({navigation}) {
       const Authenticate= async()=>{
         try{
           const createUser= await signInWithEmailAndPassword(Autho,email,password)
-           navigation.navigate('HomeScreen')
+          navigation.navigate('HomeScreen')
           console.log(createUser)
+          
         }catch(error){
           showMessage({
             message: "Invalid user password/email",
@@ -91,7 +92,14 @@ export default function LoginIn({navigation}) {
               </View>
 
                 <ButtonComp text1='Log In'  onPress={handleForm} />
+                
             </View>
+            <View style={[tw `pr-6 items-center justify-center`]}>
+            <Text style={[tw `text-white`]}>Don't have an account?
+            <Text style={[tw `text-yellow-500`]} onPress={()=>navigation.navigate('Register')}> Register</Text>
+            </Text>
+            </View>
+            
     </View>
   )
 }
