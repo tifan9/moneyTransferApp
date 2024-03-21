@@ -33,9 +33,9 @@ export const Navigation = () => {
     <Stack.Navigator initialRouteName=''>
       {/* <Stack.Screen name="Splash" component={Splash} option={{headerShown:false}}  />
       <Stack.Screen name="GetStarted" component={GetStarted} option={{headerShown:false}}  />
-      <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}} />*/}
+      <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}} />
       <Stack.Screen name="Login" component={LoginIn} options={{headerShown:false}} />
-      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/> 
+      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/> */}
       <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
       <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
       <Stack.Screen name="Sendmoney" component={Sendmoney} options={{headerShown:false}} />
@@ -55,8 +55,8 @@ export const BottomNav = () => {
         <Tab.Screen name="Home" component={Landing} options={{headerShown: false, tabBarShowLabel:false, tabBarIcon:({focused})=> <Feather name='home' size={30} color={focused? '#D9BE52':'gray'}/>  }}/>
         <Tab.Screen name="CreditCard" component={CreditCard} options={{headerShown: false, tabBarShowLabel:false, tabBarIcon:({focused})=> <Feather name='pocket' size={30} color={focused? '#D9BE52':'gray'}/>  }} />
         <Tab.Screen name="Help" component={Help} options={{headerShown: false, tabBarShowLabel:false, tabBarIcon:({focused})=> <Feather name='help-circle' size={30} color={focused? '#D9BE52':'gray'}/>  }} />
-        <Tab.Screen name="Profile" component={Profile} options={{headerShown: false, tabBarShowLabel:false, tabBarIcon:({focused})=> <Feather name='menu' size={30} color={focused? '#D9BE52':'gray'}/>  }} />
-        
+        {/* <Tab.Screen name="Profile" component={Profile} options={{headerShown: false, tabBarShowLabel:false, tabBarIcon:({focused})=> <Feather name='menu' size={30} color={focused? '#D9BE52':'gray'}/>  }} /> */}
+        <Tab.Screen name="Profile" component={Profile} options={{headerShown: false, tabBarShowLabel:false, tabBarIcon:({focused})=> <Feather name='menu' size={30} color={focused? '#D9BE52':'gray'}/>}} />
         {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
       </Tab.Navigator>
     )

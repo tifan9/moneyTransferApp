@@ -6,6 +6,7 @@ import { Transfer } from '../components/Transfer';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { TextInput, Checkbox, MD3Colors, Card } from "react-native-paper";
 import { Input } from "react-native-elements";
+import { InputText } from '../components/InputText';
 const windowedHeight = Dimensions.get('screen').height
 const width = Dimensions.get('screen')
 export const History = ({navigation}) => {
@@ -28,7 +29,7 @@ export const History = ({navigation}) => {
       </View>
       {/* Search */}
       <View style={[tw `pt-5 px-2 `]}>
-      <TextInput
+      <InputText
             underlineColor="transparent"
             style={{
               marginBottom: 10,
@@ -40,7 +41,7 @@ export const History = ({navigation}) => {
             placeholder="Search for recipient"
             theme={{ roundness: 3 }}
             left={
-              <TextInput.Icon
+              <InputText.Icon
                 icon={"magnify"}
                 color={"#BBC3A4"}
                 style={{ opacity: 0.5 }}
