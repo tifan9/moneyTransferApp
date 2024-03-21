@@ -70,6 +70,9 @@ export default function Register({navigation}) {
        
      } 
     }
+    const handlePassword=()=>{
+      setshowPassword(!showPassword)
+    }
   return (
     <View style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
         <StatusBar style='light'/>

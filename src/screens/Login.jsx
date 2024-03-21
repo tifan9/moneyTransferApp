@@ -1,5 +1,5 @@
 import React , {useState, useEffect} from 'react';
-import { View, Text, Pressable,StyleSheet,Dimensions} from 'react-native';
+import { View, Text, Pressable,StyleSheet,Dimensions, ActivityIndicator} from 'react-native';
 import { ButtonComp } from '../components/ButtonComp';
 import { StatusBar } from 'expo-status-bar';
 import HeaderText from '../components/HeaderText';
@@ -18,6 +18,8 @@ export default function LoginIn({navigation}) {
     const[emailError, setEmailError]=useState('')
     const[passwordError, setPasswordError]=useState('')
     const [showPassword,setshowPassword]= useState(true)
+    const [loading, setLoading] = useState(false);
+
     const Autho = Firebase_Auth
    
    
@@ -50,17 +52,21 @@ export default function LoginIn({navigation}) {
       
      }
      const handleForm= ()=>{
-      if (ValidateForm()){
+      setLoading(true)
+      if (ValidateForm() ){
       const Authenticate= async()=>{
         try{
           const createUser= await signInWithEmailAndPassword(Autho,email,password)
-           navigation.navigate('HomeScreen')
+          setLoading(false)
           console.log(createUser)
+          navigation.navigate('HomeScreen')
         }catch(error){
           showMessage({
             message: "Invalid user password/email",
             style:{paddingVertical:25},
             type: "danger",
+            titleStyle:{fontSize:20,paddingHorizontal:15, color:'black'},
+            backgroundColor: "#FCA210",
           });
           console.log(error)
         }
@@ -69,6 +75,7 @@ export default function LoginIn({navigation}) {
      
    } 
   }
+ 
 
    const handlePassword=()=>{
     setshowPassword(!showPassword)
@@ -82,7 +89,7 @@ export default function LoginIn({navigation}) {
             <View style={styles.container1}>
             <HeaderText text='Log In'/>
               <View >
-
+                  {loading?(<ActivityIndicator size={'middle'} color={'#FCA210'}/>):null }
                   <InputLogin TextTitle='Email Address' placeholder='email'iconNameLeft='email-outline' iconSize={20} value={email} onChangeText={setEmail} error={emailError}/>
                   <View>{emailError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:1}}> {emailError}</Text>:null}</View>
                   <InputLogin TextTitle='Password' placeholder='your password' iconNameLeft='lock-outline' iconNameRight={showPassword? 'eye-off-outline':'eye'} iconSize={20} secureTextEntry={showPassword} 
