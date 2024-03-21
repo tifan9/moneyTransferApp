@@ -40,13 +40,7 @@ export const History = ({navigation}) => {
             textColor="white"
             placeholder="Search for recipient"
             theme={{ roundness: 3 }}
-            left={
-              <InputText.Icon
-                icon={"magnify"}
-                color={"#BBC3A4"}
-                style={{ opacity: 0.5 }}
-              />
-            }
+            
           />
       </View>
             <ScrollView>
