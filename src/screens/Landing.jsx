@@ -3,10 +3,22 @@ import { View, Text,Dimensions, TouchableOpacity, ScrollView, SafeAreaView, Imag
 import tw from 'twrnc';
 import Feather from  'react-native-vector-icons/Feather'
 import { Transfer } from '../components/Transfer';
+import { userUserAuth } from '../context/UserAuthContext';
 
 const windowedHeight = Dimensions.get('screen').height
 const width = Dimensions.get('screen')
+
+const currentTime = new Date().getHours(); 
 const Landing = ({ navigation }) => {
+  let message = '';
+  if (currentTime < 12) {
+    message = 'Good morning!';
+  } else if (currentTime < 18) {
+    message = 'Good afternoon!';
+  } else {
+    message = 'Good evening!';
+  }
+  const {user} = userUserAuth()
   return (
     <>
     {/* <View style={{height:50}}></View> */}
@@ -14,13 +26,13 @@ const Landing = ({ navigation }) => {
     <View style={[tw `border-b border-gray-500 bg-[#202325] pt-6 `, {height:120} ]}>
             <View style={[tw `flex flex-row items-center justify-between p-5 pt-10`]}>
               <View>
-                <Text style={[tw `text-white font-bold text-2xl`]}>Hey, There</Text>
+                <Text style={[tw `text-white font-bold text-2xl`]}>{message} <Text>{user && user.email }</Text></Text>
                 </View>
                 <View style={[tw `flex flex-row gap-3 items-center justify-center`]}>
-                  <TouchableOpacity>
+                  <TouchableOpacity >
                     <Feather  name='bell' size={24}color={'white'}/>
                   </TouchableOpacity>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={()=> navigation.navigate('Profile')}>
                   <Image  
                   source={require('../../assets/img/avatar.png')} 
                   style={[tw `rounded-3xl`,{width: 30, height: 30}]}
@@ -40,7 +52,7 @@ const Landing = ({ navigation }) => {
               <Text style={[tw `text-white font-bold text-2xl`]}>Make your first transfer</Text>
               
             <TouchableOpacity style={[
-                  tw `rounded-lg bg-yellow-500 py-4 px-5 w-full flex justify-center items-center`,
+                  tw `rounded-lg bg-[#FCA210] py-4 px-5 w-full flex justify-center items-center`,
                 ]}
                 onPress={() => navigation.navigate('Sendmoney')}
                 >

@@ -6,7 +6,7 @@ import  {InputText} from '../components/InputText';
 import HeaderIconText from '../components/HeaderIconText';
 import {DropdownComponent} from '../components/DropDownInput';
 import FlashMessage ,{showMessage} from 'react-native-flash-message';
-
+import tw from 'twrnc';
 export default function EditProfileScreen({navigation}) {
     const height= Dimensions.get('screen').height
     const width= Dimensions.get('screen').width
@@ -75,11 +75,12 @@ export default function EditProfileScreen({navigation}) {
      } 
 
   return (
-    <KeyboardAvoidingView behavior='position' keyboardVerticalOffset={-80} style={{backgroundColor:'#121315', height:height, width:width, gap:20}}>
+    <>
+    <View style={[tw `bg-[#121315]`, {height:height, width:width}]}>
         <StatusBar style='light'/>
         <FlashMessage position={"top"}/>
         <View>
-            <HeaderIconText text='Edit Profile' />
+            <HeaderIconText text='Edit Profile' onPress={()=> navigation.navigate('Profile')}/>
         </View>
         <View>
             <Text style={{color:'#EE9B12', paddingVertical:8,paddingBottom:16, paddingHorizontal:17, fontSize:15}}>Personal Details</Text>
@@ -97,7 +98,7 @@ export default function EditProfileScreen({navigation}) {
                     <View>{valueError?<Text style={{color:'red', fontSize:12, paddingHorizontal:35,paddingTop:6}}> {valueError}</Text>:null}</View>
 
                     <Text style={{color:'#cccdcf', paddingTop:23,paddingHorizontal:20, fontSize:15}}> Home Address</Text>
-                    <InputNumber  placeholder={'000-22'} value={homeAddress} onChangeText={sethomeAddress} iconSize={30} iconNameLeft={'home'} iconColor={'gray'}/>
+                    <InputNumber  placeholder={'KK 1 st'} value={homeAddress} onChangeText={sethomeAddress} iconSize={30} iconNameLeft={'home'} iconColor={'gray'}/>
                     <View>{homeAddressError?<Text style={{color:'red', fontSize:12, paddingHorizontal:20,paddingTop:6}}> {homeAddressError}</Text>:null}</View>
                 </View>
                 
@@ -106,6 +107,9 @@ export default function EditProfileScreen({navigation}) {
                 <ButtonComp text1='Save' onPress={handleForm} />
             </View>
         </View>
-    </KeyboardAvoidingView>
+    </View>
+    
+    </>
+    
   )
 }

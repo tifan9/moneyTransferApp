@@ -5,13 +5,13 @@ import { Newrecipient } from './src/screens/Addnewcard'
 import Addnewcard  from './src/screens/Addnewcard'
 
 import { StatusBar } from 'expo-status-bar';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet} from 'react-native';
 import LoginIn from './src/screens/Login';
 import Register from './src/screens/Register';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { BottomNav, Navigation } from './src/components/Navigation';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { UserAuthContextProvider } from './src/context/UserAuthContext'
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -19,10 +19,13 @@ export default function App() {
   return (
     <>
     {/* <GestureHandlerRootView> */}
-      <NavigationContainer>
+    <UserAuthContextProvider>
+    <NavigationContainer>
         <Navigation  />
         {/* <BottomNav  /> */}
       </NavigationContainer>
+    </UserAuthContextProvider>
+      
       <StatusBar style="light"/>
       {/* </GestureHandlerRootView> */}
     </>

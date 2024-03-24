@@ -17,14 +17,14 @@ import NewRecipient from '../screens/NewRecipient';
 import Splash from '../screens/Splash';
 import GetStarted from '../screens/GetStarted';
 import Welcome from '../screens/Slides';
-import { Sendmoney } from '../screens/Sendmoney';
 import SenderScreen from '../screens/SenderScreen';
-<<<<<<< HEAD
 import EditProfileScreen from '../screens/EditProfileScreen';
-=======
+import  Addnewcards  from '../screens/Addnewcards';
+import { DataVerification } from '../screens/DataVerification';
+import { Sendmoney } from '../screens/Sendmoney';
 import { DisplayRecipient } from '../screens/DisplayRecipient';
-import { Addnewcards } from '../screens/Addnewcards';
->>>>>>> main
+import { AddCash } from '../screens/AddCash';
+import { Success } from '../screens/Transfersuccess';
 
 
 
@@ -35,28 +35,23 @@ const Stack = createNativeStackNavigator()
 export const Navigation = () => {
   return (
     <>
-<<<<<<< HEAD
-    <Stack.Navigator initialRouteName='EditProfileScreen'>
-      <Stack.Screen name="Splash" component={Splash} option={{headerShown:false}}  />
-=======
     <Stack.Navigator initialRouteName=''>
       {/* <Stack.Screen name="Splash" component={Splash} option={{headerShown:false}}  />
->>>>>>> main
       <Stack.Screen name="GetStarted" component={GetStarted} option={{headerShown:false}}  />
-      <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}} />
+      <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}} />*/}
       <Stack.Screen name="Login" component={LoginIn} options={{headerShown:false}} />
-      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/> */}
+      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/> 
       <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
       <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
       <Stack.Screen name="Sendmoney" component={Sendmoney} options={{headerShown:false}} />
       <Stack.Screen name="DisplayRecipient" component={DisplayRecipient} options={{headerShown:false}} />
       <Stack.Screen name="NewRecipient" component={NewRecipient}  options={{headerShown:false}}/>
       <Stack.Screen name="SenderScreen" component={SenderScreen}  options={{headerShown:false}}/>
-<<<<<<< HEAD
+      <Stack.Screen name="AddCash" component={AddCash} options={{headerShown:false}}/>
       <Stack.Screen name="EditProfileScreen" component={EditProfileScreen}  options={{headerShown:false}}/>
-=======
-      {/* <Stack.Screen name="Addnewcards" component={Addnewcards}  options={{headerShown:false}}/> */}
->>>>>>> main
+      <Stack.Screen name="DataVerification" component={DataVerification} options={{headerShown:false}}/>
+      <Stack.Screen name="Success" component={Success} options={{headerShown:false}}/>
+      <Stack.Screen name="AddMoney" component={AddCash} options={{headerShown:false}}/>
     </Stack.Navigator>
     </>
   )

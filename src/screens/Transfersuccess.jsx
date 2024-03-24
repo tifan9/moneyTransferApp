@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
 import { FlatList, Image, ImageBackground, Pressable, StyleSheet, Text, View,  TouchableOpacity,Dimensions } from 'react-native';
-import { InputComp } from '../components/InputComp';
+import { InputText } from '../components/InputText';
 
 
 const width=Dimensions.get('window').width;
 const height=Dimensions.get('window').height;
 
-export default function Success({navigation}) {
+export const Success=({navigation})=> {
   return (
     <View style={styles.container}>
       <Image source={require('../../assets/img/success.jpg')} style={{top:96,marginHorizontal:160,position:'absolute',zIndex:5}}/>
@@ -15,15 +15,15 @@ export default function Success({navigation}) {
     
         <Text style={{color:'white', fontSize:17, top:40,paddingHorizontal:80}}>Transfer Successful</Text>
         <View style={{ position: 'absolute', left: 20, }}>
-          <InputComp label={'Receipt'} mode={'flat'}/>
+          <InputText label={'Receipt'} mode={'flat'}/>
         </View>
 
         <View style={{ position: 'absolute', top: 70, left: 20 }}>
-          <InputComp label={'Destination country'}  mode={'flat'} />
+          <InputText label={'Destination country'}  mode={'flat'} />
         </View>
 
         <View style={{ position: 'absolute', top: 130, left: 20 }}>
-          <InputComp label={'Amount'}  mode={'flat'} />
+          <InputText label={'Amount'}  mode={'flat'} />
         </View>
 
         <View style={{ position: 'absolute', top: 340, }}>

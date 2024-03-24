@@ -8,6 +8,7 @@ import FlashMessage ,{showMessage} from 'react-native-flash-message';
 import { Firebase_Auth } from '../../firebaseConfig.js';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import tw from 'twrnc';
+import { userUserAuth } from '../context/UserAuthContext.js';
 
 
 export default function LoginIn({navigation}) {
@@ -20,9 +21,8 @@ export default function LoginIn({navigation}) {
     const [showPassword,setshowPassword]= useState(true)
     const [loading, setLoading] = useState(false);
 
-    const Autho = Firebase_Auth
-   
-   
+    // const Autho = Firebase_Auth
+    const {logIn} = userUserAuth()
 
     const isValidEmail=(email)=>{
       const emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
@@ -56,9 +56,9 @@ export default function LoginIn({navigation}) {
       if (ValidateForm() ){
       const Authenticate= async()=>{
         try{
-          const createUser= await signInWithEmailAndPassword(Autho,email,password)
+          await logIn(email,password)
          setLoading(false)
-          console.log(createUser)
+          console.log(logIn)
           navigation.navigate('HomeScreen')
         }catch(error){
           showMessage({
@@ -105,6 +105,7 @@ export default function LoginIn({navigation}) {
             <Text style={[tw `text-yellow-500`]} onPress={()=>navigation.navigate('Register')}> Register</Text>
             </Text>
             </View>
+            
             
     </View>
   )

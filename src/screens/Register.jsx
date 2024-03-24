@@ -7,6 +7,7 @@ import { InputLogin } from '../components/InputLogin';
 import { Firebase_Auth } from '../../firebaseConfig.js';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import tw from 'twrnc';
+import { userUserAuth } from '../context/UserAuthContext.js';
 
 
 export default function Register({navigation}) {
@@ -17,8 +18,8 @@ export default function Register({navigation}) {
     const[emailError, setEmailError]=useState('')
     const[passwordError, setPasswordError]=useState('')
     const [showPassword,setshowPassword]= useState(true)
-    const Autho = Firebase_Auth
-   
+    // const Autho = Firebase_Auth
+   const {signUp} = userUserAuth()
 
   
     const isValidEmail=(email)=>{
@@ -52,7 +53,7 @@ export default function Register({navigation}) {
       if (ValidateForm()){
         const Authenticate= async()=>{
             try{
-              const createUser= await createUserWithEmailAndPassword(Autho,email,password)
+              await signUp(email,password)
               // console.log(createUser)
               
               navigation.navigate('Login')

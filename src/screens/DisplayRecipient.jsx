@@ -18,7 +18,7 @@ const width = Dimensions.get("screen");
 export const DisplayRecipient = ({ navigation }) => {
   return (
     <>
-      <View style={[tw`bg-[#121214]`, { height: windowedHeight }]}>
+      <View style={[tw `bg-[#121214]`, { height: windowedHeight }]}>
         <View
           style={[
             tw `border-b border-gray-500 bg-[#202325] pt-8 `,
@@ -107,7 +107,7 @@ export const DisplayRecipient = ({ navigation }) => {
         </View>
         <View style={[tw `p-6`]}>
         <TouchableOpacity style={[
-                  tw `rounded-lg bg-yellow-500 py-5 p-5 w-full flex flex-row justify-center items-center`,
+                  tw `rounded-lg bg-[#FCA210]  p-3 w-full flex flex-row justify-center items-center`,
                 ]}
                 onPress={() => navigation.navigate('NewRecipient')}
                 >
