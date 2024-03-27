@@ -25,6 +25,7 @@ import { Sendmoney } from '../screens/Sendmoney';
 import { DisplayRecipient } from '../screens/DisplayRecipient';
 import { AddCash } from '../screens/AddCash';
 import { Success } from '../screens/Transfersuccess';
+import { NewCard } from '../screens/NewCard';
 
 
 
@@ -52,6 +53,7 @@ export const Navigation = () => {
       <Stack.Screen name="DataVerification" component={DataVerification} options={{headerShown:false}}/>
       <Stack.Screen name="Success" component={Success} options={{headerShown:false}}/>
       <Stack.Screen name="AddMoney" component={AddCash} options={{headerShown:false}}/>
+      <Stack.Screen name="NewCard" component={NewCard} options={{headerShown:false}}/>
     </Stack.Navigator>
     </>
   )

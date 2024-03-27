@@ -6,7 +6,14 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { InputText } from "../components/InputText";
 import { ButtonComp } from "../components/ButtonComp";
 import FlashMessage, { showMessage } from "react-native-flash-message";
-import { addDoc, collection, getDocs, query, updateDoc, where } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  getDocs,
+  query,
+  updateDoc,
+  where,
+} from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import { AuthContext } from "../context/AuthContext";
 import { userUserAuth } from "../context/UserAuthContext";
@@ -18,23 +25,21 @@ export const AddCash = ({ navigation }) => {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const { user } = userUserAuth();
-  // get the user login 
+  // get the user login
   const ValidateForm = () => {
     try {
       let valid = true;
       if (amount.trim() === "") {
         setAmountError("amount required");
-        valid = false
+        valid = false;
       }
       if (amount <= 0) {
         setAmountError("amount must be greater than zero");
-        valid = false
+        valid = false;
       } else {
-        setAmountError('')
-        
+        setAmountError("");
       }
-      return valid
-
+      return valid;
     } catch (error) {
       console.log(error);
     }
@@ -42,19 +47,23 @@ export const AddCash = ({ navigation }) => {
   const handleForm = async () => {
     try {
       setLoading(true);
-  
+
       if (ValidateForm()) {
         const cardRef = collection(db, "card");
-        const querySnapshot = await getDocs(query(cardRef, where("userId", "==", user.uid)));
-  
+        const querySnapshot = await getDocs(
+          query(cardRef, where("userId", "==", user.uid))
+        );
+        let updatedAmount = 0
         if (!querySnapshot.empty) {
           querySnapshot.forEach((doc) => {
             const docRef = doc.ref;
             const currentAmount = doc.data().amount;
-            const updatedAmount = currentAmount + parseFloat(amount);
-  
+            updatedAmount = currentAmount + parseFloat(amount);
+
             updateDoc(docRef, { amount: updatedAmount });
             console.log("Document updated with ID: ", doc.id);
+            console.log("Updated amount: ", updatedAmount);
+            
           });
         } else {
           const docRef = await addDoc(cardRef, {
@@ -62,8 +71,12 @@ export const AddCash = ({ navigation }) => {
             userId: user.uid,
           });
           console.log("Document written with ID: ", docRef.id);
+          console.log(amount);
+          navigation.navigate("CreditCard", {
+            updatedAmount: amount,
+          });
         }
-  
+
         setLoading(false);
         showMessage({
           message: "Saved",
@@ -72,7 +85,9 @@ export const AddCash = ({ navigation }) => {
           titleStyle: { fontSize: 20, paddingHorizontal: 15, color: "black" },
           backgroundColor: "#FCA210",
         });
-        navigation.navigate('HomeScreen');
+        navigation.navigate("CreditCard", {
+          updatedAmount: updatedAmount,
+        });
       }
     } catch (error) {
       console.log(error);
@@ -85,7 +100,7 @@ export const AddCash = ({ navigation }) => {
       });
     }
   };
-  
+
   return (
     <>
       <View style={[tw`bg-[#121214]`, { height: WindowedHeight }]}>
@@ -97,18 +112,19 @@ export const AddCash = ({ navigation }) => {
           ]}
         >
           <View style={[tw`flex flex-row gap-4 items-center p-5 pt-10`]}>
-            <TouchableOpacity onPress={() => navigation.navigate('CreditCard', { currentBalance: amount })}>
+            <TouchableOpacity onPress={() => navigation.navigate("CreditCard")}>
               <Feather name="arrow-left" size={25} color="#FCA311" />
             </TouchableOpacity>
             <Text style={[tw`text-white font-bold text-2xl`]}>Add Money</Text>
           </View>
         </View>
         <View style={[tw``, {}]}>
-          <InputText 
-          placeholder="Enter Amount" 
-          value={amount} 
-          onChangeText={setAmount} 
-          keyboardType={"numeric"} />
+          <InputText
+            placeholder="Enter Amount"
+            value={amount}
+            onChangeText={setAmount}
+            keyboardType={"numeric"}
+          />
           <View>
             {amountError ? (
               <Text

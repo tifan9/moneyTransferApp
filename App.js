@@ -1,9 +1,5 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { Sendmoney } from './src/screens/Sendmoney'
-import { Newrecipient } from './src/screens/Addnewcard'
-import Addnewcard  from './src/screens/Addnewcard'
-
 import { StatusBar } from 'expo-status-bar';
 import { Image, ImageBackground, StyleSheet} from 'react-native';
 import LoginIn from './src/screens/Login';
