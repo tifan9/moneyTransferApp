@@ -40,8 +40,8 @@ export const Navigation = () => {
       {/* <Stack.Screen name="Splash" component={Splash} option={{headerShown:false}}  />
       <Stack.Screen name="GetStarted" component={GetStarted} option={{headerShown:false}}  />
       <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}} />*/}
-      <Stack.Screen name="Login" component={LoginIn} options={{headerShown:false}} />
-      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/> 
+      {/* <Stack.Screen name="Login" component={LoginIn} options={{headerShown:false}} />
+      <Stack.Screen name="Register" component={Register}  options={{headerShown:false}}/>  */}
       <Stack.Screen name='HomeScreen' component={BottomNav}  options={{ headerShown: false }}/>
       <Stack.Screen name='history' component={History}  options={{ headerShown: false }}/>
       <Stack.Screen name="Sendmoney" component={Sendmoney} options={{headerShown:false}} />

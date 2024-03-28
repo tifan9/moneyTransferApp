@@ -13,9 +13,12 @@ export const NewCard = () => {
         <View style={[tw `bg-[#121214]`, {height:windowedHeight}]}>
         <View style={[tw `border-b border-gray-500 bg-[#202325] pt-8 `, {height:120} ]}>
           <View style={[tw `flex flex-row items-center justify-between p-5 pt-10`]}>
-          <View>
-                <Text style={[tw `text-white font-bold text-2xl`]}>My Card</Text>
-                </View>
+          <View style={[tw `flex flex-row gap-4 items-center p-5 pt-10`]}>
+            <TouchableOpacity onPress={() => navigation.navigate("CreditCard")}>
+              <Feather name="arrow-left" size={25} color="#FCA311" />
+            </TouchableOpacity>
+            <Text style={[tw `text-white font-bold text-2xl`]}>Add Card</Text>
+          </View>
           </View>
       </View>
 
