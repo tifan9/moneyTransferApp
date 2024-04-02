@@ -2,15 +2,23 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-
+import {
+  FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_STORAGE_BUCKET,
+  FIREBASE_MESSAGE,
+  FIREBASE_APP_ID,
+  FIREBASE_MEASUREMENT_ID,
+} from 'app/config'
 const firebaseConfig = {
-  apiKey: "AIzaSyB1ZYVdtlZwa-jrhsuDIUWSz9NLJgSVYgs",
-  authDomain: "moneytransferapp-82c85.firebaseapp.com",
-  projectId: "moneytransferapp-82c85",
-  storageBucket: "moneytransferapp-82c85.appspot.com",
-  messagingSenderId: "856174791514",
-  appId: "1:856174791514:web:05f10b39a54e62f03bc163",
-  measurementId: "G-958JNCZXHJ"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGE,
+  appId: FIREBASE_APP_ID,
+  measurementId: FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
